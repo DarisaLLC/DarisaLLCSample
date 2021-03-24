@@ -20,8 +20,9 @@ ci_make_app(
 	INCLUDES ${APP_DIR}/include
 	SOURCES ${APP_SRCS}
 	CINDER_PATH ${CINDER_PATH}
-	BLOCKS ${BLOCK_DIR}/Cinder-OpenCV4
-	BLOCKS ${BLOCK_DIR}/Cinder-spdlog
+	BLOCKS ${BLOCK_DIR}/Cinder-Boost
+		${BLOCK_DIR}/Cinder-OpenCV4
+		${BLOCK_DIR}/Cinder-spdlog
 )
 
 get_target_property( OUTPUT_DIR ${APP_NAME} RUNTIME_OUTPUT_DIRECTORY )

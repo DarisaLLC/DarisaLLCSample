@@ -5,10 +5,15 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 
+#include "boost/filesystem.hpp"
 #include "spdlog/spdlog.h"
 
 using namespace ci;
 using namespace ci::app;
+
+namespace boost {
+	namespace fs = filesystem;
+}
 
 class SampleApp : public App
 {
@@ -35,6 +40,24 @@ void SampleApp::setup()
 
 	spdlog::info("Welcome to spdlog version {}.{}.{}  !", SPDLOG_VER_MAJOR, SPDLOG_VER_MINOR, SPDLOG_VER_PATCH);
 	spdlog::shutdown();
+
+	boost::fs::path p( getAppPath().string() );
+
+	if ( boost::fs::exists( p ) )
+	{
+		if ( boost::fs::is_regular_file( p ) )
+		{
+			app::console() << p << " size is " << boost::fs::file_size( p ) << '\n';
+		}
+		else if ( is_directory( p ) )
+		{
+			app::console() << p << " is a directory\n";
+		}
+		else
+		{
+			app::console() << p << " exists, but is neither a regular file nor a directory\n";
+		}
+	}
 }
 
 void SampleApp::update()
