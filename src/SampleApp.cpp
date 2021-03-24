@@ -5,6 +5,8 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 
+#include "spdlog/spdlog.h"
+
 using namespace ci;
 using namespace ci::app;
 
@@ -30,6 +32,9 @@ void SampleApp::setup()
 	{
 		console() << "Failed to initialize capture" << std::endl;
 	}
+
+	spdlog::info("Welcome to spdlog version {}.{}.{}  !", SPDLOG_VER_MAJOR, SPDLOG_VER_MINOR, SPDLOG_VER_PATCH);
+	spdlog::shutdown();
 }
 
 void SampleApp::update()
