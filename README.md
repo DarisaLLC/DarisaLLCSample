@@ -2,7 +2,13 @@
 
 ## Prerequisites
 
-* OpenCV
+* Clone the project with submodules
+
+```
+git clone --recurse-submodules https://github.com/gaborpapp/DarisaLLCSample.git
+```
+
+* Download OpenCV libraries
 
 Download libraries from https://mega.nz/file/PkxiFJyD#AqfYPKGa-sskwXYNDAOP2RP_WbfvPPDM8M9hFNn6HH4
 and extract the contents into the `blocks/OpenCV4` folder.
@@ -26,7 +32,7 @@ make -j
 ```
 mkdir build
 cd build
-cmake ..
+cmake ../proj/cmake
 make -j
 ```
 
