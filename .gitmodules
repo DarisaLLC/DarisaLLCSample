@@ -4,3 +4,6 @@
 [submodule "blocks/Cinder-OpenCV4"]
 	path = blocks/Cinder-OpenCV4
 	url = https://github.com/gaborpapp/Cinder-OpenCV4.git
+[submodule "blocks/Cinder-spdlog"]
+	path = blocks/Cinder-spdlog
+	url = https://github.com/gaborpapp/Cinder-spdlog.git
