@@ -7,3 +7,6 @@
 [submodule "blocks/Cinder-spdlog"]
 	path = blocks/Cinder-spdlog
 	url = https://github.com/gaborpapp/Cinder-spdlog.git
+[submodule "blocks/Cinder-Boost"]
+	path = blocks/Cinder-Boost
+	url = https://github.com/gaborpapp/Cinder-Boost.git
